@@ -2,7 +2,8 @@ FROM python:3.6.1-alpine
 
 LABEL maintainer = "seth.rainsdon@nunetnetworks.net"
 
-RUN apk update && apk add build-base libpq pip
+RUN apk update && apk add build-base libpq
+RUN pip install --upgrade pip
 
 RUN mkdir /app
 WORKDIR /app
