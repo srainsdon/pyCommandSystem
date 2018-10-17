@@ -13,4 +13,4 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
-RUN gunicorn --bind 0.0.0.0:8888 wsgi
+RUN gunicorn --access-logfile - -b 0.0.0.0:8888 app
