@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("srainsdon/pyCommandSystem")
+        app = docker.build("srainsdon/python-command-system")
     }
 
     stage('Test image') {
