@@ -13,4 +13,4 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
-RUN gunicorn --access-logfile - --reload -b 0.0.0.0:8888 app
+CMD gunicorn --access-logfile - --reload -b 0.0.0.0:8888 app
