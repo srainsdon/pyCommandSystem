@@ -12,4 +12,4 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
-gunicorn --bind 0.0.0.0:8888 wsgi
+RUN gunicorn --bind 0.0.0.0:8888 wsgi
