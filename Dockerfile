@@ -2,15 +2,10 @@ FROM python:3.6.1-alpine
 
 LABEL maintainer = "seth.rainsdon@nunetnetworks.net"
 
-RUN apk update \
-  && apk add \
-    build-base \
-    libpq
+RUN apk update && apk add build-base libpq pip
 
-RUN pip install --upgrade pip
-
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir /app
+WORKDIR /app
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 ENV PYTHONUNBUFFERED 1
